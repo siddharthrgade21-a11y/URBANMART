@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #3a3a5a);
+  color: white;
+}
+
+/* 🔐 AUTH */
+#authContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.auth-box {
+  background: rgba(255,255,255,0.1);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+.auth-box input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+}
+
+.auth-box button {
+  padding: 10px 20px;
+  background: orange;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.auth-box span {
+  color: orange;
+  cursor: pointer;
+}
+
+/* 🔝 NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background: rgba(0,0,0,0.3);
+}
+
+.navbar input {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* 📂 SIDEBAR */
+.sidebar {
+  width: 200px;
+  position: fixed;
+  top: 60px;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar li:hover {
+  background: orange;
+}
+
+/* 📄 CONTENT */
+.content {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+/* 🛍 PRODUCTS */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  color: black;
+  margin: 15px;
+  padding: 20px;
+  width: 150px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+/* 🛒 CART */
+#cartItems li {
+  margin: 10px 0;
+}
+
+/* 🔄 UTIL */
+.hidden {
+  display: none;
+}

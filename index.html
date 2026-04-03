@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mega Mall System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 🔐 AUTH SECTION -->
+<div id="authContainer">
+  <div class="auth-box">
+    <h2>🛍 Mega Mall Login</h2>
+    <input type="text" id="loginUser" placeholder="Username">
+    <input type="password" id="loginPass" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p>Don't have account? <span onclick="showSignup()">Create Account</span></p>
+  </div>
+
+  <div class="auth-box hidden" id="signupBox">
+    <h2>Create Account</h2>
+    <input type="text" id="signupUser" placeholder="Username">
+    <input type="password" id="signupPass" placeholder="Password">
+    <button onclick="signup()">Signup</button>
+    <p>Already have account? <span onclick="showLogin()">Login</span></p>
+  </div>
+</div>
+
+<!-- 🏬 MAIN DASHBOARD -->
+<div id="mainApp" class="hidden">
+
+  <!-- 🔝 NAVBAR -->
+  <nav class="navbar">
+    <h1>🏬 Mega Mall</h1>
+    <input type="text" placeholder="Search products..." id="searchBar">
+    <button onclick="logout()">Logout</button>
+  </nav>
+
+  <!-- 📂 SIDEBAR -->
+  <div class="sidebar">
+    <ul>
+      <li onclick="showSection('home')">🏠 Home</li>
+      <li onclick="showSection('products')">🛍 Products</li>
+      <li onclick="showSection('cart')">🛒 Cart</li>
+      <li onclick="showSection('orders')">📦 Orders</li>
+      <li onclick="showSection('profile')">👤 Profile</li>
+    </ul>
+  </div>
+
+  <!-- 📄 CONTENT AREA -->
+  <div class="content">
+
+    <!-- 🏠 HOME -->
+    <div id="home" class="section">
+      <h2>Welcome to Mega Mall</h2>
+      <p>Explore latest products & deals 🔥</p>
+    </div>
+
+    <!-- 🛍 PRODUCTS -->
+    <div id="products" class="section hidden">
+      <h2>Products</h2>
+
+      <div class="product-grid">
+
+        <div class="card">
+          <h3>Shoes 👟</h3>
+          <p>₹2000</p>
+          <button onclick="addToCart('Shoes',2000)">Add</button>
+        </div>
+
+        <div class="card">
+          <h3>Watch ⌚</h3>
+          <p>₹3500</p>
+          <button onclick="addToCart('Watch',3500)">Add</button>
+        </div>
+
+        <div class="card">
+          <h3>Jacket 🧥</h3>
+          <p>₹5000</p>
+          <button onclick="addToCart('Jacket',5000)">Add</button>
+        </div>
+
+        <div class="card">
+          <h3>Headphones 🎧</h3>
+          <p>₹1500</p>
+          <button onclick="addToCart('Headphones',1500)">Add</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 🛒 CART -->
+    <div id="cart" class="section hidden">
+      <h2>Your Cart</h2>
+      <ul id="cartItems"></ul>
+      <h3>Total: ₹<span id="total">0</span></h3>
+      <button onclick="checkout()">Checkout</button>
+    </div>
+
+    <!-- 📦 ORDERS -->
+    <div id="orders" class="section hidden">
+      <h2>Your Orders</h2>
+      <ul id="orderList"></ul>
+    </div>
+
+    <!-- 👤 PROFILE -->
+    <div id="profile" class="section hidden">
+      <h2>Your Profile</h2>
+      <p>Username: <span id="profileName"></span></p>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
